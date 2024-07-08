@@ -1,0 +1,39 @@
+<div style="display: flex;">
+  <div class="nav-bar-div">
+    <div>
+      <img src="assets/energy-dashboard-logo.png" style="width: 100%;" alt="Logo">
+    </div>
+    <div class="menu-options">
+      <ul style="list-style: none; padding: 0;">
+        <li class="menu-button-elements" *ngIf="authService.isLoggedIn">
+          <a class="btn btn-warning menu-buttons" routerLink="/dashboard">
+            <i class="fa fa-tachometer icon-style"></i>Dashboard
+          </a>
+        </li>
+        <li class="menu-button-elements" *ngIf="authService.isLoggedIn">
+          <a class="btn btn-warning menu-buttons" routerLink="/profile-settings">
+            <i class="fa fa-user icon-style"></i>Profile Settings
+          </a>
+        </li>
+        <li class="menu-button-elements" *ngIf="authService.isLoggedIn">
+          <button (click)="logout()" class="btn btn-warning menu-buttons">
+            <i class="fa fa-sign-out icon-style"></i>Logout
+          </button>
+        </li>
+        <li class="menu-button-elements" *ngIf="!authService.isLoggedIn">
+          <a class="btn btn-warning menu-buttons" routerLink="/login">
+            <i class="fa fa-sign-in icon-style"></i>Login
+          </a>
+        </li>
+        <li class="menu-button-elements" *ngIf="!authService.isLoggedIn">
+          <a class="btn btn-warning menu-buttons" routerLink="/signup">
+            <i class="fa fa-user-plus icon-style"></i>Signup
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div style="flex-grow: 1;">
+    <router-outlet></router-outlet>
+  </div>
+</div>

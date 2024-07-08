@@ -1,0 +1,17 @@
+<div class="current-month-container">
+  <select [(ngModel)]="selectedPeriod" (change)="onPeriodChange()">
+    <option value="month"><h5 class="stat-title">Current Month</h5></option>
+    <option value="week"><h5 class="stat-title">Current Week</h5></option>
+    <option value="year"><h5 class="stat-title">Current Year</h5></option>
+  </select>
+  <div class="generation">
+    <h6>Energy Generation</h6>
+    <p>{{energyGeneration | number:'1.2-2'}} kWh</p>
+    <p>Daily (kW): Min {{ dailyMinGenerated | number:'1.2-2' }}, Max {{dailyMaxGenerated | number:'1.2-2'}}</p>
+  </div>
+  <div class="consumption">
+    <h6>Energy Consumption</h6>
+    <p>{{energyConsumption | number:'1.2-2'}} kWh</p>
+    <p>Daily (kW): Min {{dailyMinConsumed | number:'1.2-2' }}, Max {{dailyMaxConsumed | number:'1.2-2' }}</p>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<section class="vh-100 gradient-custom d-flex align-items-center">
+  <div class="container py-5">
+    <div class="row d-flex justify-content-center">
+      <div class="col-12">
+        <div class="card text-white" style="border-radius: 1rem; background-color: #404242;">
+          <div class="card-body p-5 text-center">
+
+            <div class="pb-5">
+
+              <h2 class="fw-bold mb-2 text-uppercase">Sign Up!</h2>
+              <p class="text-white-50 mb-5">Please enter the details!</p>
+
+              <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+                <div data-mdb-input-init class="form-outline form-white mb-4">
+                  <label class="form-label" for="email">Email</label>
+                  <input type="email" id="email" [(ngModel)]="email" name="email" class="form-control form-control-lg" required>
+                </div>
+
+                <div data-mdb-input-init class="form-outline form-white mb-4">
+                  <label class="form-label" for="username">Username</label>
+                  <input type="text" id="username" [(ngModel)]="username" name="username"
+                    class="form-control form-control-lg" required>
+                </div>
+
+                <div data-mdb-input-init class="form-outline form-white mb-4">
+                  <label class="form-label" for="password">Password</label>
+                  <input type="password" id="password" [(ngModel)]="password" name="password"
+                    class="form-control form-control-lg" required>
+                </div>
+
+                <!-- <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p> -->
+
+                <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5"
+                  type="submit">Signup</button>
+
+              </form>
+
+            </div>
+
+            <div>
+              <p class="mb-0">Don't have an account? <a routerLink="/login" class="text-white-50 fw-bold">Log in</a>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

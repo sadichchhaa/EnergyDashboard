@@ -1,0 +1,28 @@
+.nav-bar-div {
+    width: 20%;
+    height: 100vh;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.menu-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100% - 100px);
+}
+
+.menu-button-elements {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-buttons {
+    width: 100%;
+    margin: 10px;
+}
+
+.icon-style {
+    float: left;
+    margin: 3px;
+}

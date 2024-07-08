@@ -1,0 +1,18 @@
+<div class="overview-container">
+  <div class="monthly-overview">
+    <h4>Monthly Overview </h4>
+    <p class="text-dark-50 mb-5">(in kW)</p>
+  </div>
+  <div class="generation-stat">
+    <h6>Energy Generation</h6>
+    <h5>{{ totalEnergyGenerated | number:'1.2-2' }}</h5>
+  </div>
+  <div class="consumption-stat">
+    <h6>Energy Consumption</h6>
+    <h5>{{ totalEnergyConsumed | number:'1.2-2' }}</h5>
+  </div>
+  <div class="export-stat">
+    <h6>Export to Grid</h6>
+    <h5>{{ exportToGrid | number:'1.2-2' }}</h5>
+  </div>
+</div>
